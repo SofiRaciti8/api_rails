@@ -1,0 +1,303 @@
+Started GET "/" for 127.0.0.1 at 2022-08-12 21:53:17 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sofia/.rvm/gems/ruby-2.7.2/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sofia/.rvm/gems/ruby-2.7.2/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 678)
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 6397)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-12 23:36:31 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sofia/.rvm/gems/ruby-2.7.2/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sofia/.rvm/gems/ruby-2.7.2/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 571)
+Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 5107)
+
+
+Started GET "/empresas" for 127.0.0.1 at 2022-08-12 23:36:37 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/empresas"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-12 23:36:37 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2022-08-12 23:38:54 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sofia/.rvm/gems/ruby-2.7.2/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sofia/.rvm/gems/ruby-2.7.2/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 571)
+Completed 200 OK in 12ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 5107)
+
+
+Started GET "/empresas" for ::1 at 2022-08-12 23:39:03 -0300
+Processing by EmpresasController#index as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 123)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-08-12 23:39:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/empresas" for ::1 at 2022-08-12 23:44:53 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/empresas"):
+  
+Started GET "/api/v1/empresas" for ::1 at 2022-08-12 23:45:22 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::EmpresasController#index as HTML
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 12724)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEmpresas (20220813024904)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "empresas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "descripcion" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220813024904"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-13 02:51:06.576524"], ["updated_at", "2022-08-13 02:51:06.576524"]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (0.3ms)[0m  [1m[32mINSERT INTO "empresas" ("nombre", "descripcion", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nombre", "hola"], ["descripcion", "jaa"], ["created_at", "2022-08-13 02:52:01.172023"], ["updated_at", "2022-08-13 02:52:01.172023"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (0.2ms)[0m  [1m[32mINSERT INTO "empresas" ("nombre", "descripcion", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nombre", "ejemplo2"], ["descripcion", "jaa"], ["created_at", "2022-08-13 02:52:14.464110"], ["updated_at", "2022-08-13 02:52:14.464110"]]
+  [1m[36mTRANSACTION (21.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" ORDER BY "empresas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" ORDER BY "empresas"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEmpresa Load (0.4ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-08-12 23:54:52 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sofia/.rvm/gems/ruby-2.7.2/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sofia/.rvm/gems/ruby-2.7.2/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 571)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 5106)
+
+
+Started GET "/api/v1/empresas" for 127.0.0.1 at 2022-08-12 23:55:07 -0300
+Processing by Api::V1::EmpresasController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 126)
+
+
+Started GET "/api/v1/empresas" for 127.0.0.1 at 2022-08-12 23:55:09 -0300
+Processing by Api::V1::EmpresasController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 62)
+
+
+Started GET "/api/v1/empresas" for 127.0.0.1 at 2022-08-12 23:55:18 -0300
+Processing by Api::V1::EmpresasController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/empresas_controller.rb:4:in `index'
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/controllers/api/v1/empresas_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 1.0ms | Allocations: 6242)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePoliticas (20220813030216)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "politicas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "conjunto_politicas" varchar, "revision_politicas" varchar, "empresa_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_politicas_on_empresa_id" ON "politicas" ("empresa_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220813030216"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPolitica Create (0.6ms)[0m  [1m[32mINSERT INTO "politicas" ("conjunto_politicas", "revision_politicas", "empresa_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["conjunto_politicas", "123"], ["revision_politicas", "hola"], ["empresa_id", 1], ["created_at", "2022-08-13 03:08:55.267333"], ["updated_at", "2022-08-13 03:08:55.267333"]]
+  [1m[36mTRANSACTION (21.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPolitica Create (0.6ms)[0m  [1m[32mINSERT INTO "politicas" ("conjunto_politicas", "revision_politicas", "empresa_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["conjunto_politicas", "1234"], ["revision_politicas", "holaa"], ["empresa_id", 2], ["created_at", "2022-08-13 03:10:34.435478"], ["updated_at", "2022-08-13 03:10:34.435478"]]
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-08-13 00:11:05 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sofia/.rvm/gems/ruby-2.7.2/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sofia/.rvm/gems/ruby-2.7.2/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 571)
+Completed 200 OK in 14ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 5106)
+
+
+Started GET "/api/v1/empresas" for 127.0.0.1 at 2022-08-13 00:11:13 -0300
+Processing by Api::V1::EmpresasController#index as HTML
+  [1m[36mEmpresa Load (0.4ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/controllers/api/v1/empresas_controller.rb:4:in `index'
+Completed 200 OK in 42ms (Views: 18.3ms | ActiveRecord: 2.0ms | Allocations: 7016)
+
+
+Started GET "/api/v1/empresas" for 127.0.0.1 at 2022-08-13 00:12:09 -0300
+  
+SyntaxError (/home/sofia/rails/registros/app/controllers/api/v1/empresas_controller.rb:4: syntax error, unexpected [, expecting `do' or '{' or '('
+...ender json: @empresa, include [:politica]
+...                              ^
+):
+  
+app/controllers/api/v1/empresas_controller.rb:4: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/api/v1/empresas_controller.rb:4: syntax error, unexpected [, expecting `do' or '{' or '('
+Started GET "/api/v1/empresas" for 127.0.0.1 at 2022-08-13 00:12:51 -0300
+Processing by Api::V1::EmpresasController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/empresas_controller.rb:4:in `index'
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/controllers/api/v1/empresas_controller.rb:4:in `index'
+  [1m[36mPolitica Load (0.2ms)[0m  [1m[34mSELECT "politicas".* FROM "politicas" WHERE "politicas"."empresa_id" = ? LIMIT ?[0m  [["empresa_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:4:in `index'
+  [1m[36mPolitica Load (0.2ms)[0m  [1m[34mSELECT "politicas".* FROM "politicas" WHERE "politicas"."empresa_id" = ? LIMIT ?[0m  [["empresa_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:4:in `index'
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 2.8ms | Allocations: 15763)
+
+
+Started GET "/api/v1/empresas/1" for 127.0.0.1 at 2022-08-13 00:13:59 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/empresas/1"):
+  
+Started GET "/api/v1/empresas/1" for 127.0.0.1 at 2022-08-13 00:16:39 -0300
+Processing by Api::V1::EmpresasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/empresas_controller.rb:8:in `show'
+  [1m[36mEmpresa Load (0.6ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:8:in `show'
+  [1m[36mPolitica Load (0.2ms)[0m  [1m[34mSELECT "politicas".* FROM "politicas" WHERE "politicas"."empresa_id" = ? LIMIT ?[0m  [["empresa_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:9:in `show'
+Completed 200 OK in 19ms (Views: 8.2ms | ActiveRecord: 2.5ms | Allocations: 6970)
+
+
+Started GET "/api/v1/empresas/2" for 127.0.0.1 at 2022-08-13 00:16:55 -0300
+Processing by Api::V1::EmpresasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmpresa Load (0.4ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:8:in `show'
+  [1m[36mPolitica Load (0.1ms)[0m  [1m[34mSELECT "politicas".* FROM "politicas" WHERE "politicas"."empresa_id" = ? LIMIT ?[0m  [["empresa_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 1379)
+
+
+Started GET "/api/v1/empresas/3" for 127.0.0.1 at 2022-08-13 00:17:04 -0300
+Processing by Api::V1::EmpresasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:8:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 521)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Empresa with 'id'=3):
+  
+app/controllers/api/v1/empresas_controller.rb:8:in `show'
+Started GET "/api/v1/empresas/3" for 127.0.0.1 at 2022-08-13 00:18:03 -0300
+  
+NameError (undefined local variable or method `empresas' for #<ActionDispatch::Routing::Mapper:0x00007f9ce8cdaa00>):
+  
+config/routes.rb:6:in `block (3 levels) in <main>'
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/api/v1/empresas/2" for 127.0.0.1 at 2022-08-13 00:18:06 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/empresas/2"):
+  
+Started GET "/api/v1/empresas/2" for 127.0.0.1 at 2022-08-13 00:19:02 -0300
+Processing by Api::V1::EmpresasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/empresas_controller.rb:8:in `show'
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:8:in `show'
+  [1m[36mPolitica Load (0.2ms)[0m  [1m[34mSELECT "politicas".* FROM "politicas" WHERE "politicas"."empresa_id" = ? LIMIT ?[0m  [["empresa_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:9:in `show'
+Completed 200 OK in 19ms (Views: 9.7ms | ActiveRecord: 2.0ms | Allocations: 7020)
+
+
+Started GET "/api/v1/empresas/1" for 127.0.0.1 at 2022-08-13 00:19:06 -0300
+Processing by Api::V1::EmpresasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:8:in `show'
+  [1m[36mPolitica Load (0.1ms)[0m  [1m[34mSELECT "politicas".* FROM "politicas" WHERE "politicas"."empresa_id" = ? LIMIT ?[0m  [["empresa_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1388)
+
+
+Started GET "/api/v1/empresas/1" for 127.0.0.1 at 2022-08-13 00:39:51 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/sofia/rails/registros/app/controllers/api/v1/empresas_controller.rb:3: syntax error, unexpected [, expecting `do' or '{' or '('
+...ore_action :set_empresa, only [:sow, :update, :destroy]
+...                              ^
+/home/sofia/rails/registros/app/controllers/api/v1/empresas_controller.rb:4: syntax error, unexpected [, expecting `do' or '{' or '('
+...fore_action :set_models, only [:index, :show]
+...                              ^
+/home/sofia/rails/registros/app/controllers/api/v1/empresas_controller.rb:45: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/empresas_controller.rb:3: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/api/v1/empresas_controller.rb:4: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/api/v1/empresas_controller.rb:45: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/empresas_controller.rb:3: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/api/v1/empresas_controller.rb:4: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/api/v1/empresas_controller.rb:45: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/v1/empresas/1" for 127.0.0.1 at 2022-08-13 00:40:03 -0300
+  
+SyntaxError (/home/sofia/rails/registros/app/controllers/api/v1/empresas_controller.rb:3: syntax error, unexpected [, expecting `do' or '{' or '('
+...ore_action :set_empresa, only [:show, :update, :destroy]
+...                              ^
+/home/sofia/rails/registros/app/controllers/api/v1/empresas_controller.rb:4: syntax error, unexpected [, expecting `do' or '{' or '('
+...fore_action :set_models, only [:index, :show]
+...                              ^
+/home/sofia/rails/registros/app/controllers/api/v1/empresas_controller.rb:45: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/empresas_controller.rb:3: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/api/v1/empresas_controller.rb:4: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/api/v1/empresas_controller.rb:45: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/empresas_controller.rb:3: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/api/v1/empresas_controller.rb:4: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/api/v1/empresas_controller.rb:45: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/v1/empresas/1" for 127.0.0.1 at 2022-08-13 00:41:29 -0300
+  
+SyntaxError (/home/sofia/rails/registros/app/controllers/api/v1/empresas_controller.rb:45: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/empresas_controller.rb:45: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/empresas_controller.rb:45: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/api/v1/empresas/1" for 127.0.0.1 at 2022-08-13 00:42:45 -0300
+Processing by Api::V1::EmpresasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/empresas_controller.rb:39:in `set_empresa'
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:39:in `set_empresa'
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:12:in `show'
+  [1m[36mPolitica Load (0.2ms)[0m  [1m[34mSELECT "politicas".* FROM "politicas" WHERE "politicas"."empresa_id" = ? LIMIT ?[0m  [["empresa_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:13:in `show'
+Completed 200 OK in 48ms (Views: 22.2ms | ActiveRecord: 3.0ms | Allocations: 16883)
+
+
+Started GET "/api/v1/empresas/2" for 127.0.0.1 at 2022-08-13 00:42:49 -0300
+Processing by Api::V1::EmpresasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:39:in `set_empresa'
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:12:in `show'
+  [1m[36mPolitica Load (0.1ms)[0m  [1m[34mSELECT "politicas".* FROM "politicas" WHERE "politicas"."empresa_id" = ? LIMIT ?[0m  [["empresa_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/empresas_controller.rb:13:in `show'
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1778)
+
+
